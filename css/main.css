@@ -28,8 +28,12 @@ html {
 
 ::-webkit-scrollbar-thumb {
     background-color: #ececec;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
 }
-
 
 body {
     font-family: 'Cairo', sans-serif;
@@ -1283,6 +1287,11 @@ header .mega-menu .links li a i {
     top: 0;
     height: 100%;
     background-color: var(--main-color);
+    transition: width var(--main-trans-time) linear;
+    -webkit-transition: width var(--main-trans-time) linear;
+    -moz-transition: width var(--main-trans-time) linear;
+    -ms-transition: width var(--main-trans-time) linear;
+    -o-transition: width var(--main-trans-time) linear;
 }
 
 .skills .container .info .skill .progress span::before {
@@ -1465,6 +1474,9 @@ header .mega-menu .links li a i {
     padding: 15px;
     color: var(--main-color);
     font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .events .container .info .time .unit span:last-child {
@@ -1766,7 +1778,7 @@ header .mega-menu .links li a i {
 }
 
 .topvideos .holder .list {
-    min-width: 300px;
+    min-width: 350px;
     background-color: white;
 }
 
@@ -1776,6 +1788,10 @@ header .mega-menu .links li a i {
     padding: 20px;
     background-color: #f4f4f4;
     font-weight: bold;
+}
+.topvideos .holder .list .name .shuffle-icon:hover{
+    color: var(--main-color);
+    cursor: pointer;
 }
 
 .topvideos .holder .list ul li {
@@ -1789,7 +1805,8 @@ header .mega-menu .links li a i {
     -o-transition: var(--main-trans-time);
 }
 
-.topvideos .holder .list ul li:hover {
+.topvideos .holder .list ul li:hover,
+.topvideos .holder .list ul li.active {
     background-color: #fafafa;
     color: var(--main-color);
 }
@@ -1805,16 +1822,55 @@ header .mega-menu .links li a i {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
+}
+.topvideos .holder .preview .play-icon{
+    z-index: 100;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background-color: var(--main-color);
+    color: var(--section-back-color);
+    font-size: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+}
+.topvideos .holder .preview .play-icon:hover{
+    background-color: var(--secondary-color);
+    color: var(--back-color);
+}
+.topvideos .holder .preview .play-icon i{
+    margin-left: 5px;
 }
 
+
 .topvideos .holder .preview img {
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(0.8);
+    -webkit-filter: grayscale(0.8);
 }
 
 .topvideos .holder .preview .info {
     padding: 20px;
     background-color: white;
     margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
 }
 
 /*End Videos*/
@@ -2212,3 +2268,56 @@ footer .copyright span {
 }
 
 /*End Footer*/
+
+/* start scroll-top */
+.arrow-top{
+    opacity: 0;
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    cursor: pointer;
+    font-size: 25px;
+    color: var(--back-color);
+    background-color: var(--main-color);
+    transition: var(--main-trans-time);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transition: var(--main-trans-time);
+    -moz-transition: var(--main-trans-time);
+    -ms-transition: var(--main-trans-time);
+    -o-transition: var(--main-trans-time);
+}
+.arrow-top:hover{
+    background-color: var(--secondary-color);
+}
+.show-top-arrow{
+    opacity: 1;
+}
+/* End scroll-top */
+
+/*start page progress*/
+.page-progress{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background-color: var(--main-color);
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+/*End page progress*/

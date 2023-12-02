@@ -649,25 +649,25 @@
                 <div class="skill">
                     <h3>HTML <span>80%</span></h3>
                     <div class="progress">
-                        <span style="width: 80%"></span>
+                        <span style="width: 0" data-width = "80%"></span>
                     </div>
                 </div>
                 <div class="skill">
                     <h3>Css3 <span>90%</span></h3>
                     <div class="progress">
-                        <span style="width: 90%"></span>
+                        <span style="width: 0" data-width = "90%"></span>
                     </div>
                 </div>
                 <div class="skill">
-                    <h3>JaavScript <span>75%</span></h3>
+                    <h3>JaavScript <span>85%</span></h3>
                     <div class="progress">
-                        <span style="width: 75%"></span>
+                        <span style="width: 0" data-width = "85%"></span>
                     </div>
                 </div>
                 <div class="skill">
                     <h3>Angular <span>60%</span></h3>
                     <div class="progress">
-                        <span style="width: 60%"></span>
+                        <span style="width: 0" data-width = "60%"></span>
                     </div>
                 </div>
             </div>
@@ -731,23 +731,23 @@
             <div class="info">
                 <div class="time">
                     <div class="unit">
-                        <span>15</span>
+                        <span class="days">00</span>
                         <span>Days</span>
                     </div>
                     <div class="unit">
-                        <span>08</span>
+                        <span class="hours">00</span>
                         <span>Hours</span>
                     </div>
                     <div class="unit">
-                        <span>45</span>
+                        <span class="minutes">00</span>
                         <span>Minutes</span>
                     </div>
                     <div class="unit">
-                        <span>55</span>
+                        <span class="seconds">00</span>
                         <span>Seconds</span>
                     </div>
                 </div>
-                <h3>Tech Masters Event 2023</h3>
+                <h3>Tech Masters Event August,2024</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et vero tenetur doloremque iusto ut adipisci
                     quam ratione aliquam excepturi nulla in harum, veritatis porro.</p>
             </div>
@@ -834,22 +834,26 @@
                 <div class="list">
                     <div class="name">
                         Top Videos
-                        <i class="fas fa-random"></i>
+                        <i class="fas fa-random shuffle-icon"></i>
                     </div>
                     <ul>
-                        <li>How to Create Sub Domain<span>05:18</span></li>
-                        <li>Palying With The DNS <span>03:19</span></li>
-                        <li>Everything About The Virtual Hosts <span>05:25</span></li>
-                        <li>How To Monitor Your Website <span>04:16</span></li>
-                        <li>Uncharted Beating The Last Boss <span>07:46</span></li>
-                        <li>Ys Oath In Felghana Overview <span>03:12</span></li>
-                        <li>Ys Series All Games Ending <span>08:10</span></li>
+                        <li class="active" data-preview="video-preview-1"><div>How to Create Sub Domain</div><span>05:18</span></li>
+                        <li data-preview="video-preview-2"><div>Palying With The DNS</div><span>03:19</span></li>
+                        <li data-preview="video-preview-3"><div>Everything About The Virtual Hosts</div><span>05:25</span></li>
+                        <li data-preview="video-preview-4"><div>How To Monitor Your Website</div><span>04:16</span></li>
+                        <li data-preview="video-preview-2"><div>Uncharted Beating The Last Boss</div><span>07:46</span></li>
+                        <li data-preview="video-preview-1"><div>Ys Series All Games Ending</div><span>08:10</span></li>
                     </ul>
                 </div>
                 <div class="preview">
-                    <img src="images/video-preview.jpg" alt="">
+                    <div class="play-icon">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <img src="images/video-preview-1.jpg" alt="">
                     <div class="info">
-                        Every Thing About The Virtual Hosts
+                        <div>How to Create Sub Domain</div>
+                        <span>05:18</span>
+                        
                     </div>
                 </div>
             </div>
@@ -867,22 +871,22 @@
         <div class="container">
             <div class="box">
                 <i class="far fa-user fa-2x fa-fw"></i>
-                <span class="number">150</span>
+                <span class="number" data-goal="150">0</span>
                 <span class="text">Clients</span>
             </div>
             <div class="box">
                 <i class="fas fa-code fa-2x fa-fw"></i>
-                <span class="number">135</span>
+                <span class="number" data-goal="135">0</span>
                 <span class="text">Projects</span>
             </div>
             <div class="box">
                 <i class="fas fa-globe-asia fa-2x fa-fw"></i>
-                <span class="number">50</span>
+                <span class="number" data-goal="50">0</span>
                 <span class="text">Countries</span>
             </div>
             <div class="box">
                 <i class="far fa-money-bill-alt fa-2x fa-fw"></i>
-                <span class="number">500</span>
+                <span class="number" data-goal="500">0</span>
                 <span class="text">Money</span>
             </div>
         </div>
@@ -980,6 +984,17 @@
         <p class="copyright">Copyright<span>&copy;</span>2023 By Elzero</p>
     </footer>
     <!--End Footer-->
+    
+    <!--Start Arrow Top-->
+    <div class="arrow-top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </div>
+    <!-- End Arrow Top -->
+   <!-- Start Page Progress -->
+    <div class="page-progress"></div>
+   <!-- End Page Progress -->
+   
+    <script src="main.js"></script>
 
 </body>
 
