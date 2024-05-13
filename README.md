@@ -4,6 +4,7 @@
 # Covered Topics :
     - html5
     - css3
+    - Animations
     - fontawesome
     - JavaScript
     - Es6
